@@ -9,7 +9,8 @@ var mainCtrl = function($scope, $http) {
           'callback=JSON_CALLBACK'
         ].join('&');
     $http.jsonp(url).success(function(data) {
-      console.dir(data);
+      // console.dir(data);
+      $scope.results = data.feed.entry;
     });
   }
 }
